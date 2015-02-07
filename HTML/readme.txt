@@ -66,6 +66,18 @@ HTML水平线 -- <hr />
 
 基于内容的样式 -- abbr acronym cite code dfn em kbd samp strong var
 物理样式       -- b biq i s small strike sub sup tt -- 应该避免使用物理样式 
+
+style    -- 样式定义
+link     -- 资源引用
+div      -- 文档中的节或区域（块级）
+span     -- 文档中的行内的小块或区域
+font     -- 文本的字体、字体尺寸、字体颜色，不赞成使用，请使用样式
+basefont -- 基准字体，不赞成使用，请使用样式
+center   -- 对文本进行水平居中，不赞成使用，请使用样式
+
+HTML超链接 -- a -- 两种使用方式 -- 通过使用href属性，创建指向另一个文档的链接
+                                -- 通过使用name属性，创建文档内的书签
+                -- target属性   -- target="_blank",新窗口中打开
 -----------------------------------------------------------------------------
 属性 -- align   -- 对齐方式 -- center
      -- bgcolor -- 背景颜色
@@ -74,3 +86,5 @@ HTML水平线 -- <hr />
      -- id      -- 元素唯一ID
      -- style   -- 行内样式
      -- title   -- 额外信息（可在工具提示中显示）
+     -- rel     -- 外部样式表link的属性
+                -- <link rel="stylesheet" type="text/css" href="mystyle.css" />
