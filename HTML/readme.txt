@@ -6,7 +6,7 @@ HTML -- Hypertext Markup Language -- 超文本标记语言
      -- 注释 -- <!-- This is a comment -->
      -- 在显示页面时，浏览器会移除源代码中多余的空格和空行，
         所有连续的空格或空行都会被算作一个空格，
-        HTML代码中的所有连续的空行（换行）也被显示为一个空格（&nbsp）
+        HTML代码中的所有连续的空行（换行）也被显示为一个空格（&nbsp;）
 -----------------------------------------------------------------------------
 HTML标签 -- 由尖括号包围的关键词，比如<html>
 
@@ -78,8 +78,29 @@ center   -- 对文本进行水平居中，不赞成使用，请使用样式
 HTML超链接 -- a -- 两种使用方式 -- 通过使用href属性，创建指向另一个文档的链接
                                 -- 通过使用name属性，创建文档内的书签
                 -- target属性   -- target="_blank",新窗口中打开
+HTML图像   -- <img /> -- src属性    -- 图像的URL地址
+                      -- alt属性    -- 为图像定义一串预备的可替换的文本
+                      -- usemap属性 -- 图像映射，引用map元素中的id或name属性
+map        -- 图像地图
+area       -- 图像地图中可点击区域  -- shape coords href target alt
+
+HTML表格 -- table -- caption -- 标题
+                  -- thead   -- 页眉
+                  -- tbody   -- 主体
+                  -- tfoot   -- 页脚
+                  -- cellpadding属性 -- 单元格边距
+                  -- cellspacing属性 -- 单元格间距
+                  -- frame属性       -- 框架属性，控制围绕表格的边框
+                                     -- box above below hsides vsides
+                  -- tr -- 行
+                        -- td -- 表格数据，即数据单元格的内容
+                        -- th -- 表格的表头，大多数浏览器会把表头显示为粗体居中的文本
+                              -- colspan属性 -- 跨列
+                              -- rowspan属性 -- 跨行
+                  -- col      -- 用于表格列的属性
+                  -- colgroup -- 表格列的组
 -----------------------------------------------------------------------------
-属性 -- align   -- 对齐方式 -- center
+属性 -- align   -- 对齐方式 -- center、bottom、middle、top、left、right
      -- bgcolor -- 背景颜色
      -- border  -- 边框
      -- class   -- 元素类名
