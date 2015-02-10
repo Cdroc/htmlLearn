@@ -109,3 +109,93 @@ HTML表格 -- table -- caption -- 标题
      -- title   -- 额外信息（可在工具提示中显示）
      -- rel     -- 外部样式表link的属性
                 -- <link rel="stylesheet" type="text/css" href="mystyle.css" />
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+<!DOCTYPE> -- 不是html标签，它为浏览器提供一项信息（声明），即HTML是用什么版本编写的
+HTML版本   -- HTML HTML+ HTML2.0 HTML3.2 HTML4.01 XHTML1.0 HTML5 XHTML5
+           -- HTML5 -- <!DOCTYPE html>
+           -- HTML 4.01 -- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                            "http://www.w3.org/TR/html4/loose.dtd">
+           -- XHTML 1.0 -- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                            "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+-----------------------------------------------------------------------------
+HTML头部元素 -- head   -- 关于文档的信息 -- 所有头部元素的容器
+             -- title  -- 文档标题
+             -- base   -- 页面上所有链接的默认地址或默认目标
+                       -- <base href="http://www.w3school.com.cn/images/" />
+                       -- <base target="_blank" />
+             -- link   -- 文档与外部资源之间的关系(常用于连接样式表)
+                       -- <link rel="stylesheet" type="text/css" href="mystyle.css" />
+             -- meta   -- 关于HTML文档的元数据
+                       -- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                       -- <meta http-equiv="Refresh" content="5;url=http://www.w3chool.com.cn" />
+                          -- 5秒重定向到http://www.w3school.com.cn
+                       -- <meta name="*" content="*" /> -- 描述文档或定义文档的关键词
+                          -- name和content属性的作用是描述页面的内容
+             -- script -- 客户端脚本
+             -- style  -- 文档的样式信息
+-----------------------------------------------------------------------------
+HTML脚本 -- script   -- 用于定义客户端脚本，比如JavaScript
+                     -- <script type="text/javascript"></script> 
+                        -- 必需的type属性规定脚本的MIME类型
+                     -- 为防止老式浏览器的不识别，应将脚本隐藏在注释标签中
+                        -- JavaScript -- <!-- //-->
+                        -- VBScript   -- <!-- '-->
+         -- noscript -- 提供无法使用脚本时的替代内容
+                     -- 可包含普通HTML页面的body元素中能够找到的所有元素
+-----------------------------------------------------------------------------
+HTML字符实体 -- &entity_name;(实体名称) &#entity_number;(实体数字)
+                -- 实体名称对大小写敏感
+             -- 浏览器不支持所有实体名称，对实体数字的支持却很好
+             --      -- 空格     -- &nbsp;   -- &#160;
+             -- <    -- 小于号   -- &lt;     -- &#60;
+             -- >    -- 大于号   -- &gt;     -- &#62;
+             -- &    -- 和号     -- &amp;    -- &#38;
+             -- "    -- 引号     -- &quot;   -- &#34;
+             -- '    -- 撇号     -- &apos;   -- &#39; -- IE不支持&apos;
+             -- ￠   -- 分       -- &cent;   -- &#162;
+             -- £    -- 镑       -- &pound;  -- &#163;
+             -- ¥    -- 日圆     -- &yen;    -- &#165;
+             -- €    -- 欧阳     -- &euro;   -- &#8364;
+             -- §    -- 小节     -- &sect;   -- &#167;
+             -- ©    -- 版权     -- &copy;   -- &#169;
+             -- ®    -- 注册商标 -- &reg;    -- &#174;
+             -- ™    -- 商标     -- &trade;  -- &#8482;
+             -- ×    -- 乘号     -- &times;  -- &#215;
+             -- ÷    -- 除号     -- &divide; -- &#247;
+-----------------------------------------------------------------------------
+HTML统一资源定位器 -- URL -- Uniform Resource Locator -- 也被称为网址
+                          -- 可以由单词组成，比如"w3school.com.cn"
+                          -- 或是因特网协议(IP)地址：192.168.1.253
+                          -- 语法规则 -- scheme://host.domain:port/path/filename
+                                      -- scheme   -- 英特网的类型，最常见的类型是http
+                                                     -- http  -- 超文本传输协议
+                                                              -- 以http://开头的普通网页，不加密
+                                                     -- https -- 安全超文本传输协议
+                                                              -- 安全网页，加密所有信息交换
+                                                     -- ftp   -- 文本传输协议
+                                                              -- 用于将文件下载或上传至网站
+                                                     -- file  -- 您计算机上的文件
+                                      -- host     -- 域主机(http的默认主机是www)
+                                      -- domain   -- 英特网域名，比如 w3school.com.cn
+                                      -- :port    -- 主机上的端口号(http的默认端口号是80)
+                                      -- path     -- 服务器上的路径
+                                                     --如果省略，则文档必须位于网站的根目录中
+                                      -- filename -- 文档/资源的名称
+-----------------------------------------------------------------------------
+HTML URL 字符编码 -- URL编码会将字符转换为可通过因特网传输的格式
+                  -- URL只能使用ASCII字符集来通过因特网进行发送
+                  -- URL编码使用"%"其后跟随两位的十六进制数来替换非ASCII字符
+                  -- URL不嫩包含空格，URL编码通常使用 + 来替换空格
+                  -- 字符 -- URL编码
+                  -- €    -- %80
+                  -- £    -- %A3
+                  -- ©    -- %A9
+                  -- ®    -- %AE
+                  -- À    -- %C0
+                  -- Á    -- %C1
+                  -- Â    -- %C2
+                  -- Ã    -- %C3
+                  -- Ä    -- %C4
+                  -- Å    -- %C5
